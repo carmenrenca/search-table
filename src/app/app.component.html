@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">
+        Nombre<input
+          autofocus
+          [(ngModel)]="name"
+          type="search"
+          id="name-filter"
+        />
+      </th>
+
+      <th scope="col">
+        Especie
+        <input type="search" id="Apellido-filter" />
+      </th>
+
+      <th scope="col">
+        Género
+        <input type="search" id="Email-filter" />
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of listUser">
+      <td>{{ user.name }}</td>
+      <td>{{ user.species }}</td>
+      <td>{{ user.gender }}</td>
+    </tr>
+  </tbody>
+</table>
